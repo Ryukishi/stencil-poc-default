@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
+    <title>Stencil Component Starter</title>
+
+    <script type="module" src="/build/stenciljs-example.esm.js"></script>
+    <script nomodule src="/build/stenciljs-example.js"></script>
+</head>
+
+<body>
+    <style>
+        body {
+            width: 100vw;
+            height: 100vh;
+            font-family: sans-serif;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        
+        poc-button.var-test {
+            --color-primary: red;
+        }
+    </style>
+    <!-- <my-component first="Stencil" middle="'Don't call me a framework'" last="JS"></my-component> -->
+    <!-- <poc-button class="var-test" variant="secondary" size="large">Secondary!</poc-button> -->
+
+    <poc-button variant="primary" size="small">Primary</poc-button>
+    <poc-button variant="secondary" size="large">Secondary!</poc-button>
+    <poc-button variant="outlined" size="large">Outlined</poc-button>
+    <poc-button variant="text">Text</poc-button>
+
+    <poc-inputfield id="test"></poc-inputfield>
+    <poc-inputfield placeholder="Something else"></poc-inputfield>
+
+    <!-- <poc-table></poc-table> -->
+
+    <script>
+        function getData() {
+            console.log("snap");
+        }
+
+        var btn = document.querySelector('poc-button');
+        btn.event = getData;
+
+        // Example 1
+        listItems = [{
+            name: 'Johan',
+            country: 'Netherlands',
+            phone: '0635508221'
+        }, {
+            name: 'Klaas',
+            country: 'Netherlands',
+            phone: '0655278391'
+        }];
+
+        horizontalheaders = ['Name', 'Country', 'Phone no.'];
+
+        var table = document.querySelector('poc-table');
+        table.data = listItems;
+        console.log(listItems);
+        table.horizontalheaders = horizontalheaders;
+
+        // // Example 2
+        // listItems = [{
+        //     may: '500000',
+        //     june: '70000',
+        //     july: '900000'
+        // }, {
+        //     may: '550000',
+        //     june: '800000',
+        //     july: '1200000'
+        // }];
+
+        // horizontalheaders = ['May', 'June', 'July'];
+        // verticalheaders = ['Projected', 'Actual'];
+
+        // var table = document.querySelector('poc-table');
+        // table.data = listItems;
+        // table.horizontalheaders = horizontalheaders;
+        // table.verticalheaders = verticalheaders;
+
+        // Example 3
+        // listItems = [{
+        //     may: '500000'
+        // }, {
+        //     may: '550000'
+        // }];
+
+        // verticalheaders = ['Projected', 'Actual'];
+
+        // var table = document.querySelector('poc-table');
+        // table.data = listItems;
+        // table.verticalheaders = verticalheaders;
+    </script>
+</body>
+
+</html>

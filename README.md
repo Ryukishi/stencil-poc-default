@@ -1,1 +1,0 @@
-# stencil-poc-default

@@ -1,0 +1,41 @@
+:host {
+    display: block;
+}
+
+.custom-field {
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.custom-field input {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    border: none;
+    background: #f2f2f2;
+    padding: 12px;
+    border-radius: 3px;
+    width: 250px;
+    outline: none;
+    font-size: 14px;
+}
+
+.custom-field .input-placeholder {
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: #aaa;
+    transition: top 0.3s ease, font-size 0.3s ease, color 0.3s ease;
+}
+
+.custom-field input:valid+.input-placeholder,
+.custom-field input:focus+.input-placeholder {
+    top: 10px;
+    font-size: 10px;
+    color: #222;
+}
