@@ -2,7 +2,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'poc-table',
-  styleUrl: 'poc-table.css',
+  styleUrl: 'poc-table.scss',
   shadow: true,
 })
 export class PocTable {

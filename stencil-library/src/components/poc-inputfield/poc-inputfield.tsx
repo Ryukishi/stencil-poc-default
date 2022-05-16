@@ -2,7 +2,7 @@ import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'poc-inputfield',
-  styleUrl: 'poc-inputfield.css',
+  styleUrl: 'poc-inputfield.scss',
   shadow: true,
 })
 export class PocInputfield {

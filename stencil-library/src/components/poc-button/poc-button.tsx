@@ -2,7 +2,7 @@ import { Component, h, Host, Prop } from '@stencil/core';
 
 @Component({
   tag: 'poc-button',
-  styleUrl: 'poc-button.css',
+  styleUrl: 'poc-button.scss',
   shadow: true,
 })
 export class PocButton {
