@@ -28,16 +28,16 @@ export class PocButton {
    * event
    * @returns the event of the button
    */
-   @Prop() event: any;
+  @Prop() btnClick: (e: MouseEvent) => void;
+  
 
   render() {
     return (
       <Host>
-      <button class={`btn btn-${this.variant} ${this.type} ${this.size}`} onClick={this.event}>
+      <button class={`btn btn-${this.variant} ${this.type} ${this.size}`} onClick={this.btnClick}>
         <slot></slot>
       </button>
       </Host>
     );
   }
-
 }

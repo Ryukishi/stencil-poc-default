@@ -7,12 +7,12 @@
 
 ## Properties
 
-| Property  | Attribute | Description              | Type                                               | Default     |
-| --------- | --------- | ------------------------ | -------------------------------------------------- | ----------- |
-| `event`   | `event`   | event                    | `any`                                              | `undefined` |
-| `size`    | `size`    | small \| medium \| large | `"large" \| "medium" \| "small"`                   | `'medium'`  |
-| `type`    | `type`    | button \| submit         | `"button" \| "submit"`                             | `'button'`  |
-| `variant` | `variant` | primary \| secondary     | `"outlined" \| "primary" \| "secondary" \| "text"` | `'primary'` |
+| Property   | Attribute | Description              | Type                                               | Default     |
+| ---------- | --------- | ------------------------ | -------------------------------------------------- | ----------- |
+| `btnClick` | --        | event                    | `(e: MouseEvent) => void`                          | `undefined` |
+| `size`     | `size`    | small \| medium \| large | `"large" \| "medium" \| "small"`                   | `'medium'`  |
+| `type`     | `type`    | button \| submit         | `"button" \| "submit"`                             | `'button'`  |
+| `variant`  | `variant` | primary \| secondary     | `"outlined" \| "primary" \| "secondary" \| "text"` | `'primary'` |
 
 
 ----------------------------------------------

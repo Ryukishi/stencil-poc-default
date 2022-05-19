@@ -25,7 +25,7 @@ export namespace Components {
           * event
           * @returns the event of the button
          */
-        "event": any;
+        "btnClick": (e: MouseEvent) => void;
         /**
           * small | medium | large
           * @returns the button size
@@ -119,7 +119,7 @@ declare namespace LocalJSX {
           * event
           * @returns the event of the button
          */
-        "event"?: any;
+        "btnClick"?: (e: MouseEvent) => void;
         /**
           * small | medium | large
           * @returns the button size
@@ -137,6 +137,7 @@ declare namespace LocalJSX {
         "variant"?: 'primary' | 'secondary' | 'outlined' | 'text';
     }
     interface PocInputfield {
+        "onInputValue"?: (event: CustomEvent<string>) => void;
         /**
           * example text for user input
           * @returns the example text

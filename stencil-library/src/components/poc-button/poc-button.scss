@@ -1,3 +1,6 @@
+@use '../../../build/scss/_variables.scss';
+$col-background: variables.$color-base-white;
+$col-background: blue !default;
 :host {
     display: block;
     --opacity-level: 0.8;
@@ -5,7 +8,7 @@
 
 .btn.btn-primary {
     background-color: #57657A;
-    color: white;
+    color: $col-background;
     border: solid #57657A;
 }
 
@@ -70,3 +73,5 @@
     margin-left: 20px;
     font-size: 3rem;
 }
+
+// $col-background: var(--color-background, variables.$color-base-white);

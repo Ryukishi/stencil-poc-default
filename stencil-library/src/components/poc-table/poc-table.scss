@@ -1,3 +1,37 @@
 :host {
-  display: block;
+    display: block;
+    margin-top: 2rem;
 }
+
+table,
+.th-header,
+.td-prop {
+    border-collapse: collapse;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.thead-blue {
+    background-color: royalblue;
+    opacity: 0.8;
+    color: white;
+}
+
+tbody tr.row-tint:nth-of-type(even) {
+    background-color: #f2f2f2;
+}
+
+.td-prop {
+    padding: 10px;
+}
+
+.th-header {
+    padding: 10px;
+    min-width: 200px;
+}
+
+
+/* .empty-horizontal {
+  display: block;
+  min-height: 50px;
+} */

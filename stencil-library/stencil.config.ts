@@ -1,6 +1,8 @@
 import { Config } from '@stencil/core';
 import { angularOutputTarget } from '@stencil/angular-output-target';
 
+import { sass } from '@stencil/sass';
+
 export const config: Config = {
   namespace: 'stencil-library',
   outputTargets: [
@@ -24,4 +26,5 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
+  plugins: [sass()]
 };
