@@ -1,9 +1,8 @@
 @use '../../../build/scss/_variables.scss';
-$col-background: variables.$color-base-white;
-$col-background: blue !default;
+$col-background: var(--color-background, variables.$color-base-white);
 :host {
     display: block;
-    --opacity-level: 0.8;
+    --border: 2px solid #222;
 }
 
 .btn.btn-primary {
@@ -22,7 +21,7 @@ $col-background: blue !default;
     background: #eee;
     border-radius: 5px;
     line-height: 100%;
-    opacity: var(--opacity-level);
+    opacity: 0.8;
     transition: opacity 0.3s ease;
 }
 
@@ -48,7 +47,7 @@ $col-background: blue !default;
 .btn.btn-outlined {
     color: #222;
     background: none;
-    border: 2px solid #222;
+    border: var(--border);
 }
 
 .btn.btn-text {
@@ -73,5 +72,3 @@ $col-background: blue !default;
     margin-left: 20px;
     font-size: 3rem;
 }
-
-// $col-background: var(--color-background, variables.$color-base-white);

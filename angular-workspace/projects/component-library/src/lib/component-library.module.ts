@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { defineCustomElements } from 'stencil-library/loader'
+import { defineCustomElements } from 'stencil-library/loader/index'
 import { MyComponent, PocButton, PocTable, PocInputfield } from './stencil-generated/components';
 
 defineCustomElements(window);

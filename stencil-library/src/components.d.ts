@@ -22,11 +22,6 @@ export namespace Components {
     }
     interface PocButton {
         /**
-          * event
-          * @returns the event of the button
-         */
-        "btnClick": (e: MouseEvent) => void;
-        /**
           * small | medium | large
           * @returns the button size
          */
@@ -43,6 +38,7 @@ export namespace Components {
         "variant": 'primary' | 'secondary' | 'outlined' | 'text';
     }
     interface PocInputfield {
+        "clear": boolean;
         /**
           * example text for user input
           * @returns the example text
@@ -115,11 +111,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface PocButton {
-        /**
-          * event
-          * @returns the event of the button
-         */
-        "btnClick"?: (e: MouseEvent) => void;
+        "onBtnClick"?: (event: CustomEvent<any>) => void;
         /**
           * small | medium | large
           * @returns the button size
@@ -137,6 +129,7 @@ declare namespace LocalJSX {
         "variant"?: 'primary' | 'secondary' | 'outlined' | 'text';
     }
     interface PocInputfield {
+        "clear"?: boolean;
         "onInputValue"?: (event: CustomEvent<string>) => void;
         /**
           * example text for user input

@@ -1,4 +1,4 @@
-import { Component, h, Host, Prop } from '@stencil/core';
+import { Component, h, Host, Prop, Listen, Event, EventEmitter } from '@stencil/core';
 
 @Component({
   tag: 'poc-button',
@@ -28,13 +28,19 @@ export class PocButton {
    * event
    * @returns the event of the button
    */
-  @Prop() btnClick: (e: MouseEvent) => void;
+
+  @Listen('click', {capture: true})
+  handleClick() {
+    console.log("hoi");
+    this.btnClick.emit();
+  }
   
+  @Event({bubbles:true, composed:true}) btnClick: EventEmitter<any>;
 
   render() {
     return (
       <Host>
-      <button class={`btn btn-${this.variant} ${this.type} ${this.size}`} onClick={this.btnClick}>
+      <button class={`btn btn-${this.variant} ${this.type} ${this.size}`}>
         <slot></slot>
       </button>
       </Host>

@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
+import { Component, Host, h, Prop, Event, EventEmitter, Watch } from '@stencil/core';
 
 @Component({
   tag: 'poc-inputfield',
@@ -11,14 +11,24 @@ export class PocInputfield {
    * @returns the example text
    */
   @Prop() placeholder: string = 'Enter text';
+
+  /**
+   * boolean check wether the input fields need to be reset
+   * @returns the clear boolean
+   */
+  @Prop() clear: boolean = false;
+
+  @Watch('clear')
+  onBoolChanged() {
+    this.textInput.value = "";
+  }
   
   textInput: HTMLInputElement;
 
-  updateValue = (event: Event) => {
-    event.preventDefault;
-
+  updateValue = () => {
     this.inputValue.emit(this.textInput.value);
   }
+
 
   @Event({bubbles:true, composed:true}) inputValue: EventEmitter<string>;
 

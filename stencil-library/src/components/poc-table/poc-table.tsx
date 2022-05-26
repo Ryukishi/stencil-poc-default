@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop, Watch } from '@stencil/core';
+import { Component, Host, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'poc-table',
@@ -10,14 +10,7 @@ export class PocTable {
    * data to be displayed in the table
    * @returns data in json format
    */
-   @Prop() data: any[];
-
-   @Watch('data')
-   onDataChanged(data: any[]) {
-    console.log('prev value: ', this.data);
-    console.log('new value: ', name);
-    this.data = data;
-  }
+  @Prop() data: any[];
 
   /**
    * headers to be displayed in the first row
@@ -39,10 +32,6 @@ export class PocTable {
     let header = this.verticalheaders.shift();
 
     return header;
-  }
-
-  componentWillLoad(){
-    this.onDataChanged(this.data);
   }
   
   render() {

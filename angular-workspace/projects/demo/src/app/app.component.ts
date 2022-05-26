@@ -7,7 +7,7 @@ import { Component, ElementRef } from '@angular/core';
 })
 export class AppComponent {
   title = 'Stencil-poc-default';
-  
+
   tableItems: any;
   horizontalHeaders: any;
   verticalHeaders: any;
@@ -18,8 +18,7 @@ export class AppComponent {
   firstColumnInput: string = "";
   secondColumnInput: string = "";
   thirdColumnInput: string = "";
-
-  showThirdInput: boolean = true;
+  clearValues: boolean = false;
 
   ngOnInit() {
     this.setTableExampleHorizontal();
@@ -30,9 +29,7 @@ export class AppComponent {
     if (this.horizontalHeaders) {
       this.firstColumn = this.horizontalHeaders[0];
       this.secondColumn = this.horizontalHeaders[1];
-      if (this.showThirdInput) {
-        this.thirdColumn = this.horizontalHeaders[2];
-      }
+      this.thirdColumn = this.horizontalHeaders[2];
     }
   }
 
@@ -66,27 +63,39 @@ export class AppComponent {
   }
 
   insertIntoTable = (): void => {
-    this.tableItems.push({
-      name: this.firstColumnInput,
-      country: this.secondColumnInput,
-      phone: this.thirdColumnInput
-    });
-    
-    let table = document.getElementById("poc-table");
-    table?.setAttribute("data", this.tableItems);
+    this.clearValues = true;
 
-    console.log(this.tableItems);
+    if(this.firstColumnInput, this.secondColumnInput, this.thirdColumnInput === "") {
+      alert(this.horizontalHeaders + " all need to be filled in!");
+    } else {
+      this.tableItems = [...this.tableItems, {
+        name: this.firstColumnInput,
+        country: this.secondColumnInput,
+        phone: this.thirdColumnInput
+      }];
+    }
+    
+    this.clearInputValues(); 
+  }
+
+  clearInputValues() {
+    this.firstColumnInput = "";
+    this.secondColumnInput = "";
+    this.thirdColumnInput = "";
   }
 
   setFirstColumnInput(event: any): void {
     this.firstColumnInput = event.detail;
+    this.clearValues = false;
   }
   
   setSecondColumnInput(event: any): void {
     this.secondColumnInput = event.detail;
+    this.clearValues = false;
   }
 
   setThirdColumnInput(event: any): void {
     this.thirdColumnInput = event.detail;
+    this.clearValues = false;
   }
 }

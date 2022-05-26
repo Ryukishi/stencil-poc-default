@@ -7,9 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute     | Description                 | Type     | Default        |
-| ------------- | ------------- | --------------------------- | -------- | -------------- |
-| `placeholder` | `placeholder` | example text for user input | `string` | `'Enter text'` |
+| Property      | Attribute     | Description                 | Type      | Default        |
+| ------------- | ------------- | --------------------------- | --------- | -------------- |
+| `clear`       | `clear`       |                             | `boolean` | `false`        |
+| `placeholder` | `placeholder` | example text for user input | `string`  | `'Enter text'` |
 
 
 ## Events

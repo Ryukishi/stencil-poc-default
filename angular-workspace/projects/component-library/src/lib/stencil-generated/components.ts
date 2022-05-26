@@ -29,23 +29,30 @@ export class MyComponent {
 }
 
 
-export declare interface PocButton extends Components.PocButton {}
+export declare interface PocButton extends Components.PocButton {
+  /**
+   *  
+   */
+  btnClick: EventEmitter<CustomEvent<any>>;
+
+}
 
 @ProxyCmp({
   defineCustomElementFn: undefined,
-  inputs: ['btnClick', 'size', 'type', 'variant']
+  inputs: ['size', 'type', 'variant']
 })
 @Component({
   selector: 'poc-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['btnClick', 'size', 'type', 'variant']
+  inputs: ['size', 'type', 'variant']
 })
 export class PocButton {
   protected el: HTMLElement;
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['btnClick']);
   }
 }
 
@@ -60,13 +67,13 @@ export declare interface PocInputfield extends Components.PocInputfield {
 
 @ProxyCmp({
   defineCustomElementFn: undefined,
-  inputs: ['placeholder']
+  inputs: ['clear', 'placeholder']
 })
 @Component({
   selector: 'poc-inputfield',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
-  inputs: ['placeholder']
+  inputs: ['clear', 'placeholder']
 })
 export class PocInputfield {
   protected el: HTMLElement;
