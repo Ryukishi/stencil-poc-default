@@ -1,4 +1,4 @@
-Author: Donovan Schaafsma
+Author: [Donovan Schaafsma](https://github.com/Ryukishi)
 
 Instructions to build and run project
 
