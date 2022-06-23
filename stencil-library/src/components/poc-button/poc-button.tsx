@@ -13,10 +13,10 @@ export class PocButton {
   @Prop() variant: 'primary' | 'secondary' | 'outlined' | 'text' = 'primary';
 
   /**
-   * button | submit
+   * standard | submit
    * @returns the button type
    */
-  @Prop() type: 'button' | 'submit' = 'button';
+  @Prop() type: 'standard' | 'submit' = 'standard';
 
   /**
    * small | medium | large
@@ -25,13 +25,11 @@ export class PocButton {
   @Prop() size: 'small' | 'medium' | 'large' = 'medium';
 
   /**
-   * event
-   * @returns the event of the button
+   * click emitter
+   * @returns the emit to notify the project of a buttonpress
    */
-
   @Listen('click', {capture: true})
   handleClick() {
-    console.log("hoi");
     this.btnClick.emit();
   }
   

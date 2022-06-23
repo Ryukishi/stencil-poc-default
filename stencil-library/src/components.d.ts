@@ -27,10 +27,10 @@ export namespace Components {
          */
         "size": 'small' | 'medium' | 'large';
         /**
-          * button | submit
+          * standard | submit
           * @returns the button type
          */
-        "type": 'button' | 'submit';
+        "type": 'standard' | 'submit';
         /**
           * primary | secondary
           * @returns the button variant
@@ -38,6 +38,10 @@ export namespace Components {
         "variant": 'primary' | 'secondary' | 'outlined' | 'text';
     }
     interface PocInputfield {
+        /**
+          * boolean check wether the input fields need to be reset
+          * @returns the clear boolean
+         */
         "clear": boolean;
         /**
           * example text for user input
@@ -52,15 +56,15 @@ export namespace Components {
          */
         "data": any[];
         /**
-          * headers to be displayed in the first column
-          * @returns first column headers
-         */
-        "horizontalheaders": any;
-        /**
           * headers to be displayed in the first row
-          * @returns first row headers
+          * @returns column headers
          */
-        "verticalheaders": any;
+        "horizontalheaders": any[];
+        /**
+          * headers to be displayed in the first column
+          * @returns row headers
+         */
+        "verticalheaders": any[];
     }
 }
 declare global {
@@ -118,10 +122,10 @@ declare namespace LocalJSX {
          */
         "size"?: 'small' | 'medium' | 'large';
         /**
-          * button | submit
+          * standard | submit
           * @returns the button type
          */
-        "type"?: 'button' | 'submit';
+        "type"?: 'standard' | 'submit';
         /**
           * primary | secondary
           * @returns the button variant
@@ -129,6 +133,10 @@ declare namespace LocalJSX {
         "variant"?: 'primary' | 'secondary' | 'outlined' | 'text';
     }
     interface PocInputfield {
+        /**
+          * boolean check wether the input fields need to be reset
+          * @returns the clear boolean
+         */
         "clear"?: boolean;
         "onInputValue"?: (event: CustomEvent<string>) => void;
         /**
@@ -144,15 +152,15 @@ declare namespace LocalJSX {
          */
         "data"?: any[];
         /**
-          * headers to be displayed in the first column
-          * @returns first column headers
-         */
-        "horizontalheaders"?: any;
-        /**
           * headers to be displayed in the first row
-          * @returns first row headers
+          * @returns column headers
          */
-        "verticalheaders"?: any;
+        "horizontalheaders"?: any[];
+        /**
+          * headers to be displayed in the first column
+          * @returns row headers
+         */
+        "verticalheaders"?: any[];
     }
     interface IntrinsicElements {
         "my-component": MyComponent;

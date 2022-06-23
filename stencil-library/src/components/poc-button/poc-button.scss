@@ -1,18 +1,48 @@
 @use '../../../build/scss/_variables.scss';
-$col-background: var(--color-background, variables.$color-base-white);
+$color-text-white: var(--color-text-white, variables.$color-base-text-white);
+$color-text-black: var(--color-text-black, variables.$color-base-text-black);
+$color-primary: var(--color-primary, variables.$color-base-button-primary);
+$color-secondary: var(--color-secondary, variables.$color-base-button-secondary);
+$color-outlined: var(--color-outlined, variables.$color-base-button-outlined);
+$color-text: var(--color-text, variables.$color-base-button-text);
+$primary-border-width: var(--primary-border-width, variables.$border-button-primary-width);
+$primary-border-style: var(--primary-border-style, variables.$border-button-primary-style);
+$primary-border-color: var(--primary-border-color, variables.$border-button-primary-color);
+$secondary-border-width: var(--secondary-border-width, variables.$border-button-secondary-width);
+$secondary-border-style: var(--secondary-border-style, variables.$border-button-secondary-style);
+$secondary-border-color: var(--secondary-border-color, variables.$border-button-secondary-color);
+$outlined-border-width: var(--outlined-border-width, variables.$border-button-outlined-width);
+$outlined-border-style: var(--outlined-border-style, variables.$border-button-outlined-style);
+$outlined-border-color: var(--outlined-border-color, variables.$border-button-outlined-color);
+$text-border-width: var(--text-border-width, variables.$border-button-text-width);
+$text-border-style: var(--text-border-style, variables.$border-button-text-style);
+$text-border-color: var(--text-border-color, variables.$border-button-text-color);
+.btn.btn-primary {
+    background-color: $color-primary;
+    color: $color-text-white;
+    border: $primary-border-width $primary-border-style $primary-border-color;
+}
+
+.btn.btn-secondary {
+    background-color: $color-secondary;
+    color: $color-text-white;
+    border: $secondary-border-width $secondary-border-style $secondary-border-color;
+}
+
+.btn.btn-outlined {
+    background: $color-outlined;
+    color: $color-text-black;
+    border: $outlined-border-width $outlined-border-style $outlined-border-color;
+}
+
+.btn.btn-text {
+    background: $color-text;
+    color: $color-text-black;
+    border: $text-border-width $text-border-style $text-border-color;
+}
+
 :host {
     display: block;
-    --border: 2px solid #222;
-}
-
-.btn.btn-primary {
-    background-color: #57657A;
-    color: $col-background;
-    border: solid #57657A;
-}
-
-:host(.test-button) {
-    color: #222;
 }
 
 .btn {
@@ -36,24 +66,6 @@ $col-background: var(--color-background, variables.$color-base-white);
 .btn.btn-text:active,
 .btn.btn-outlined:active {
     opacity: .3;
-}
-
-.btn.btn-secondary {
-    color: var(--color-primary, white);
-    background: royalblue;
-    border: solid royalblue;
-}
-
-.btn.btn-outlined {
-    color: #222;
-    background: none;
-    border: var(--border);
-}
-
-.btn.btn-text {
-    color: #222;
-    background: none;
-    border: none;
 }
 
 .btn.small {

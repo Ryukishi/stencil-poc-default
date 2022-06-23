@@ -11,26 +11,10 @@
 </head>
 
 <body>
-    <style>
-        body {
-            width: 100vw;
-            height: 100vh;
-            font-family: sans-serif;
-            align-items: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        /* poc-button.var-test {
-            --color-background: red;
-        } */
-    </style>
-    <!-- <poc-button class="var-test" variant="secondary" size="large">Secondary!</poc-button> -->
-
     <poc-inputfield [placeholder]="firstColumn" [clear]="clearValues" (inputValue)="setFirstColumnInput($event)"></poc-inputfield>
     <poc-inputfield [placeholder]="secondColumn" [clear]="clearValues" (inputValue)="setSecondColumnInput($event)"></poc-inputfield>
     <poc-inputfield [placeholder]="thirdColumn" [clear]="clearValues" (inputValue)="setThirdColumnInput($event)"></poc-inputfield>
-    <poc-button class="var-test" variant="primary" size="medium" (btnClick)="insertIntoTable()">Submit</poc-button>
+    <poc-button variant="primary" size="medium" (btnClick)="insertIntoTable()">Submit</poc-button>
 
     <poc-table [data]="tableItems" [horizontalheaders]="horizontalHeaders" [verticalheaders]="verticalHeaders"></poc-table>
 

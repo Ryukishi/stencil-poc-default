@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute | Description              | Type                                               | Default     |
-| --------- | --------- | ------------------------ | -------------------------------------------------- | ----------- |
-| `size`    | `size`    | small \| medium \| large | `"large" \| "medium" \| "small"`                   | `'medium'`  |
-| `type`    | `type`    | button \| submit         | `"button" \| "submit"`                             | `'button'`  |
-| `variant` | `variant` | primary \| secondary     | `"outlined" \| "primary" \| "secondary" \| "text"` | `'primary'` |
+| Property  | Attribute | Description              | Type                                               | Default      |
+| --------- | --------- | ------------------------ | -------------------------------------------------- | ------------ |
+| `size`    | `size`    | small \| medium \| large | `"large" \| "medium" \| "small"`                   | `'medium'`   |
+| `type`    | `type`    | standard \| submit       | `"standard" \| "submit"`                           | `'standard'` |
+| `variant` | `variant` | primary \| secondary     | `"outlined" \| "primary" \| "secondary" \| "text"` | `'primary'`  |
 
 
 ## Events

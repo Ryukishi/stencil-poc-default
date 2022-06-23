@@ -1,25 +1,99 @@
 {
     "color": {
         "base": {
-            "gray": {
-                "light": {
-                    "value": "#CCCCCC"
+            "button": {
+                "primary": {
+                    "value": "#57657A"
                 },
-                "medium": {
-                    "value": "#999999"
+                "secondary": {
+                    "value": "#4169e1"
                 },
-                "dark": {
-                    "value": "#111111"
+                "outlined": {
+                    "value": "#FFFFFF"
+                },
+                "text": {
+                    "value": "#FFFFFF"
                 }
             },
-            "red": {
-                "value": "#FF0000"
+            "text": {
+                "white": {
+                    "value": "#FFFFFF"
+                },
+                "black": {
+                    "value": "#222222"
+                }
             },
-            "green": {
-                "value": "#00FF00"
+            "inputfield": {
+                "background-white": {
+                    "value": "#f2f2f2"
+                },
+                "placeholder-color": {
+                    "value": "#aaaaaa"
+                },
+                "animation-color": {
+                    "value": "#222222"
+                }
             },
-            "white": {
-                "value": "#FFFFFF"
+            "table": {
+                "background-header": {
+                    "value": "#4169e1"
+                },
+                "background-row": {
+                    "value": "#f2f2f2"
+                }
+            }
+        }
+    },
+    "border": {
+        "button": {
+            "primary": {
+                "width": {
+                    "value": "none"
+                },
+                "style": {
+                    "value": "solid"
+                },
+                "color": {
+                    "value": "57657A"
+                }
+            },
+            "secondary": {
+                "width": {
+                    "value": "none"
+                },
+                "style": {
+                    "value": "solid"
+                },
+                "color": {
+                    "value": "#4169e1"
+                }
+            },
+            "outlined": {
+                "width": {
+                    "value": "2px"
+                },
+                "style": {
+                    "value": "solid"
+                },
+                "color": {
+                    "value": "#222"
+                }
+            },
+            "text": {
+                "width": {
+                    "value": "none"
+                },
+                "style": {
+                    "value": "none"
+                },
+                "color": {
+                    "value": "none"
+                }
+            }
+        },
+        "table": {
+            "radius": {
+                "value": "5px"
             }
         }
     }

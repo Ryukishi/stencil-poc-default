@@ -1,3 +1,8 @@
+@use '../../../build/scss/_variables.scss';
+$color-header-text: var(--color-header-text, variables.$color-base-text-white);
+$color-background-header: var(--color-background-header, variables.$color-base-table-background-header);
+$color-background-row: var(--color-background-row, variables.$color-base-table-background-row);
+$border-radius: var(--color-radius, variables.$border-table-radius);
 :host {
     display: block;
     margin-top: 2rem;
@@ -7,18 +12,18 @@ table,
 .th-header,
 .td-prop {
     border-collapse: collapse;
-    border-radius: 5px;
+    border-radius: $border-radius;
     overflow: hidden;
 }
 
 .thead-blue {
-    background-color: royalblue;
+    background-color: $color-background-header;
     opacity: 0.8;
-    color: white;
+    color: $color-header-text;
 }
 
 tbody tr.row-tint:nth-of-type(even) {
-    background-color: #f2f2f2;
+    background-color: $color-background-row;
 }
 
 .td-prop {
@@ -29,9 +34,3 @@ tbody tr.row-tint:nth-of-type(even) {
     padding: 10px;
     min-width: 200px;
 }
-
-
-/* .empty-horizontal {
-  display: block;
-  min-height: 50px;
-} */

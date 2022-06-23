@@ -22,6 +22,7 @@ export class AppComponent {
 
   ngOnInit() {
     this.setTableExampleHorizontal();
+    // this.setTableExampleHorizontalVertical();
     this.setHTMLInputAndPlaceholders();
   }
 

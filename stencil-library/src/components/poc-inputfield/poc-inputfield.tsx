@@ -6,6 +6,8 @@ import { Component, Host, h, Prop, Event, EventEmitter, Watch } from '@stencil/c
   shadow: true,
 })
 export class PocInputfield {
+  textInput: HTMLInputElement;
+
   /**
    * example text for user input
    * @returns the example text
@@ -18,17 +20,21 @@ export class PocInputfield {
    */
   @Prop() clear: boolean = false;
 
+  /**
+   * clears the input values when clear = true
+   */
   @Watch('clear')
   onBoolChanged() {
     this.textInput.value = "";
   }
   
-  textInput: HTMLInputElement;
-
+  /**
+   * change emitter
+   * @returns the emit to notify of a changed value
+   */
   updateValue = () => {
     this.inputValue.emit(this.textInput.value);
   }
-
 
   @Event({bubbles:true, composed:true}) inputValue: EventEmitter<string>;
 

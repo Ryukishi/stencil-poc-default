@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property      | Attribute     | Description                 | Type      | Default        |
-| ------------- | ------------- | --------------------------- | --------- | -------------- |
-| `clear`       | `clear`       |                             | `boolean` | `false`        |
-| `placeholder` | `placeholder` | example text for user input | `string`  | `'Enter text'` |
+| Property      | Attribute     | Description                                            | Type      | Default        |
+| ------------- | ------------- | ------------------------------------------------------ | --------- | -------------- |
+| `clear`       | `clear`       | boolean check wether the input fields need to be reset | `boolean` | `false`        |
+| `placeholder` | `placeholder` | example text for user input                            | `string`  | `'Enter text'` |
 
 
 ## Events
